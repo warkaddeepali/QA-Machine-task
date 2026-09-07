@@ -1,0 +1,41 @@
+info:
+  name: Add Customer
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customers"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "name": "John Doe",
+          "email": "johndoe@example.com",
+          "phone": "+1234567890",
+          "address": "123 Main Street"
+      }
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "test(\"Status code is 200 or 201\", function () {\r
+
+        \    expect(res.getStatus()).to.be.oneOf([200, 201]);\r
+
+        });"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs: Adds a new customer using the Bearer Token captured dynamically from the valid login sequence.

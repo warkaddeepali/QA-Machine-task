@@ -1,0 +1,38 @@
+{
+  "name": "FieldForceConnect - Test Env",
+  "variables": [
+    {
+      "name": "base_url",
+      "value": "https://test.fieldforceconnect.com",
+      "type": "text",
+      "enabled": true,
+      "secret": false
+    },
+    {
+      "name": "valid_email",
+      "value": "email",
+      "type": "text",
+      "enabled": true,
+      "secret": false
+    },
+    {
+      "name": "valid_password",
+      "value": "password",
+      "type": "text",
+      "enabled": true,
+      "secret": false
+    },
+    {
+      "name": "auth_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxODI3IiwiQ29tcGFueUlkIjoiMTQzMSIsIklzUmVmZXJyYWxVc2VyIjoiRmFsc2UiLCJuYmYiOjE3ODg0NjAyNzEsImV4cCI6MTc5MTA1MjI3MSwiaWF0IjoxNzg4NDYwMjcxfQ.9gz6qSMsVpa_juYHhPFNQXAnjRnWr0Cku4-Eecxx0f4",
+      "type": "text",
+      "enabled": true,
+      "secret": false
+    }
+  ],
+  "info": {
+    "type": "bruno-environment",
+    "exportedAt": "2026-09-04T10:19:41.736Z",
+    "exportedUsing": "Bruno/v4.1.0"
+  }
+}
